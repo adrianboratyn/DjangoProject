@@ -1,0 +1,8 @@
+Skład grupy i role: 
+Adrian Boratyn w60080  
+Kamil Gołda w60087   
+Michał Dzindzio w60099   
+ 
+Temat projektu:
+Biuro podróży
+Aplikacja będzie umożliwiać przeglądanie oferty wycieczek fikcyjnego biura podróży. Po wybraniu wycieczki użytkownik zostanie przekierowany do strony ze szczegółami o danym wyjeździe razem z cennikiem. Strona będzie podawała informacje turystyczne o danym miejscu. Dodatkowo będą podawane informacje o stanie zachorowań na COVID w danym kraju (publiczne API), pogoda (publiczne API) oraz kursy walut. Będzie mógł także dodać do zamówienia dodatkowe atrakcje, np. prywatnego przewodnika albo lepszy pokój w hotelu.

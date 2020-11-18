@@ -1,0 +1,97 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'home/css/base.css'%}">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    {% block head %}{% endblock %}
+</head>
+<body>
+    <header class="main-header">
+        <div class="logo">
+            <a href="#">LOGO</a>
+        </div>
+
+        <input type="checkbox" class="menu-btn" id="menu-btn">
+        <label for="menu-btn" class="menu-icon">
+            <span class="menu-icon__line"></span>
+        </label>
+
+        <ul class="nav-links">
+            <li class="nav-link">
+                <a href="#">About</a>
+            </li>
+            <li class="nav-link">
+                <a href="#">Wycieczki</a>
+            </li>
+            <li class="nav-link">
+                <a href="#">Service</a>
+            </li>
+            <li class="nav-link">
+                <a href="#">Contact</a>
+            </li>
+        </ul>
+    </header>
+
+    {% block body %}{% endblock %}
+    
+    <div class="footerDiv">
+        <footer class="footer">
+            <div class="footer-left">
+                <img src="#" alt="Logo biura">
+                <p>
+                    Info o firmie
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Id dolor magni, nemo neque expedita obcaecati corporis tenetur qui, totam vitae sunt earum aspernatur minima ut nihil ipsum quibusdam commodi distinctio.
+                </p>
+                <div class="socials">
+                    <a href="#"><i class="fa fa-facebook"></i></a>
+                    <a href="#"><i class="fa fa-twitter"></i></a>
+                    <a href="#"><i class="fa fa-youtube"></i></a>
+                    <a href="#"><i class="fa fa-dribbble"></i></a>
+                    <a href="#"><i class="fa fa-tumblr"></i></a>
+                </div>
+            </div>
+            <ul class="footer-right">
+                <li>
+                    <h2>Product</h2>
+                    <ul class="box">
+                        <li><a href="#">Theme Design</a></li>
+                        <li><a href="#">Theme Design</a></li>
+                        <li><a href="#">Theme Design</a></li>
+                        <li><a href="#">Theme Design</a></li>
+                        <li><a href="#">Theme Design</a></li>
+                        <li><a href="#">Theme Design</a></li>
+                    </ul>
+                </li>
+                <li class="features">
+                    <h2>Useful Links</h2>
+                    <ul class="box">
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Pricing</a></li>
+                        <li><a href="#">Theme Design</a></li>
+                        <li><a href="#">Theme Design</a></li>
+                        <li><a href="#">Theme Design</a></li>
+                        <li><a href="#">Theme Design</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <h2>Address</h2>
+                    <ul class="box">
+                        <li><a href="#">Theme Design</a></li>
+                        <li><a href="#">Theme Design</a></li>
+                        <li><a href="#">Warszawa</a></li>
+                        <li><a href="#">Polska</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <div class="footer-bottom">
+                <p>All Right reserved by &copy;nazwaFirmy 2020</p>
+            </div>
+        </footer>
+    </div>
+    <script src="{% static 'home/js/main.js'%}"></script>
+
+</body>
+</html>

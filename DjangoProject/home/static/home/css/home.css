@@ -1,0 +1,133 @@
+@import url('https://fonts.googleapis.com/css?family=Lato');
+.container {
+  display: flex;
+  width: 80%;
+  margin: 2rem auto;
+  justify-content: center;
+  align-items: center;
+  flex-flow:row wrap;
+}
+
+.container div{
+  border-radius: 15px;
+  margin: 5px;
+  width: 220px;
+  height: 200px;
+  padding: 10px;
+  padding-top: 20px;
+  z-index: 1;
+  background-color: rgba(255, 255, 255,0.5);
+  cursor: pointer;
+  box-shadow: 10px 10px 8px #888888;
+}
+.container div p {
+  text-align: center;
+  font-family: "Lato", "Segoe Ui", -apple-system, BlinkMacSystemFont, sans-serif;
+  font-weight: bold;
+  line-height: 1.6;
+  letter-spacing: 2px;
+  word-spacing: 4px;
+  color:black;
+}
+
+.container div img {
+  width: 40%;
+  height: auto;
+  margin-left: 50%;
+  transform: translateX(-50%);
+}
+
+.hero {
+  height: 100vh;
+  background: url('/static/home/img/samolot.jpg') no-repeat bottom center;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  flex-flow: row wrap;
+  padding: 0 10vw;
+  padding-top: 60px;
+  color: #fff;
+  width:100%;
+}
+
+.hero .clouds {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.hero .clouds img {
+  position: absolute;
+  bottom: 0;
+  max-width: 100%;
+  animation: animate calc(8s * var(--i)) linear infinite;
+}
+
+.hero h1 {
+  position: relative;
+  max-width:80%;
+  margin-top:10%;
+  font-size: auto;
+  text-transform: uppercase;
+  text-align: center;
+  background:rgba(0, 0, 0, 0.2) ;
+  padding: 1rem;
+  border-radius: 20px 0;
+  display: table;
+  vertical-align: middle;
+}
+.hero h1::before, .hero h1::after{
+  content: '';
+  position: absolute;
+  top: 0;
+  height: 100%;  
+  width: 50%;
+}
+.hero h1::before{
+  left:0;
+  border-bottom: 6px solid #000;
+}
+.hero h1::after{
+  right: 0;
+  border-top: 6px solid #000;
+}
+
+@media screen and (max-width: 768px) {
+  .hero h1 {
+    font-size: 0.9rem;
+  }
+  .container {
+    width: 80%;
+  }
+  .container div {
+    width:160px;
+    height:100px;
+    z-index: 0;
+  }
+  .container div p {
+    font-size: 0.5rem;
+  }
+  .container div img {
+    width: 30%;
+  }
+}
+@media screen and (max-width: 350px) {
+  .hero h1 {
+    font-size: 0.75rem;
+    margin-top:5%;
+  }
+  .container div {
+    width:150px;
+    height: 85px;
+    z-index: 0;
+  }
+  .container div p {
+    font-size: 0.3rem;
+  }
+  .container div img {
+  width: 30%;
+  }
+}

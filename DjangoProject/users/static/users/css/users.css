@@ -1,0 +1,47 @@
+.frame {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-left: auto;
+    margin-right: auto;
+    width: 60%;
+    background-color: rgba(255, 255, 255,0.5);
+    border-radius: 60px;
+    position: relative;
+    margin: 20vh auto;
+    height:auto;
+    font-size:1rem;
+    flex-direction: column;
+    padding:5%;
+}
+
+fieldset {
+    width:100%;
+    height:80%;
+    margin:1%;
+    padding:1%;
+}
+
+fieldset p {
+    width:50vh;
+    margin:2vh;
+    padding:5px;
+}
+
+fieldset p input {
+    display:block;
+    padding:5px;
+    font-size:1rem;
+}
+
+.submit button {
+    width:40%;
+    height:40px;
+    margin-left:50%;
+    transform:translateX(-50%);
+}
+
+ul {
+    padding:3%;
+}

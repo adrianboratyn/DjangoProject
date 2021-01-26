@@ -32,8 +32,24 @@
             <li class="nav-link">
                 <a href="#">Contact</a>
             </li>
+            {% if user.is_authenticated %}
+            <li class="nav-link">
+                <a href="{% url 'logout' %}">Wyloguj się</a>
+            </li>
+            {% else %}
+            <li class="nav-link">
+                <a href="{% url 'login' %}">Zaloguj się</a>
+            </li>
+            {% endif %}
         </ul>
     </header>
+    {% if messages %}
+        {% for message in messages %}
+            <div>
+                {{ message }}
+            </div>
+        {% endfor %}
+    {% endif %}
 
     {% block body %}{% endblock %}
     

@@ -8,40 +8,19 @@
 
 {% block body %}
   <div class="hero">
-      <h1>IT flies - serfuj nie tylko po internecie</h1>
-      <div class="clouds">
-          <img src="{% static 'home/img/cloud1.png'%}" style="--i:1;">
-          <img src="{% static 'home/img/cloud2.png'%}" style="--i:2;">
-          <img src="{% static 'home/img/cloud3.png'%}" style="--i:3;">
-          <img src="{% static 'home/img/cloud4.png'%}" style="--i:4;">
-          <img src="{% static 'home/img/cloud5.png'%}" style="--i:5;">
-      </div>
-      <div class="container">
-    <div>
-      <img src="{% static 'home/img/chat.png'%}">
-      <p>
-          Najczęściej zadawane pytania (FAQ)
-      </p>
+    <h1>IT flies - serfuj nie tylko po internecie</h1>
+    <div class="clouds">
+      <img src="{% static 'home/img/cloud1.png'%}" style="--i:1;">
+      <img src="{% static 'home/img/cloud2.png'%}" style="--i:2;">
+      <img src="{% static 'home/img/cloud3.png'%}" style="--i:3;">
+      <img src="{% static 'home/img/cloud4.png'%}" style="--i:4;">
+      <img src="{% static 'home/img/cloud5.png'%}" style="--i:5;">
     </div>
-    <div>
-      <img src="{% static 'home/img/cash.png'%}">
-      <p>
-        Aktualne kursy walut
-    </p>
-    </div>
-    <div>
-      <img src="{% static 'home/img/plane.png'%}">
-      <p>
-        Bezpieczeństwo na lotnisku i w samolocie
-      </p>
-    </div>
-    <div>
-      <img src="{% static 'home/img/bus.png'%}">
-      <p>
-        Na wycieczce objazdowej
-      </p>
+    <div class="container">
+      {% include "home/partials/card.html" with image="home/img/chat.png" text="Najczęściej zadawane pytania (FAQ)" %}      
+      {% include "home/partials/card.html" with image="home/img/cash.png" text="Aktualne kursy walut" %}      
+      {% include "home/partials/card.html" with image="home/img/plane.png" text="Bezpieczeństwo na lotnisku i w samolocie" %}      
+      {% include "home/partials/card.html" with image="home/img/bus.png" text="Na wycieczce objazdowej" %}      
     </div>
   </div>
-  </div>
-  
-  {% endblock %}
+{% endblock %}

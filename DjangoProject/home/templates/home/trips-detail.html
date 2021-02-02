@@ -1,0 +1,62 @@
+{% extends "home/base.html" %}
+{% load static %}
+
+{% block head %}
+    <link rel="stylesheet" href="{% static 'home/css/trips.css'%}">
+    <title>Strona z Wycieczkami</title>
+{% endblock head %}
+
+{% block body %}
+
+<div class="contOferty">
+    <div id="oferta">
+        <h1 class="article-title">{{ object.title }}</h1>
+            <div class="imgdet">
+                <img src="{{ object.image_one.url }}">
+                <img src="{{ object.image_two.url }}">
+                <img src="{{ object.image_three.url }}">
+                <img src="{{ object.image_four.url }}">
+            </div>
+          <div class="media-body">
+
+            <p class="article-content">{{ object.description }}</p>
+              <h2>
+                    <span>
+                        Hotel: {{ object.Hotel }}
+                        <br>
+                        Ocena: {{ object.rating }}/5
+                        <br>
+                        Czas trwania: {{ object.duration }} dni
+                        <br>
+                        Cena od {{ object.price }} zł/os
+                </span>
+                </h2>
+          </div>
+    </div>
+    <div id="zamow">
+        <h2>Formularz Rezerwacji</h2>
+    <form>
+        <label for="termin">Termin:</label>
+        <select id="termin">
+            <option>{{ object.deadline1 }}</option>
+            <option>{{ object.deadline2 }}</option>
+            <option>{{ object.deadline3 }}</option>
+        </select>
+        <label for="dorosli">Dorosłych:</label>
+        <input id="dorosli" type="number" min="1" max="10" value=1 oninput="getPrice()" >
+        <label for="dzieci">Dzieci:</label>
+        <input id="dzieci" type="number" min="0" max="50" value=0 oninput="getPrice()">
+        <label for="tel">Numer kontaktowy:</label>
+        <input id="tel" type="tel">
+        <label for="prywatny_przewodnik">Prywatny przewodnik (+300PLN)</label>
+        <input type="checkbox" id="prywatny_przewodnik" onclick="getPrice()">
+        <label for="pokoj">Pokój premium (+400PLN)</label>
+        <input type="checkbox" id="pokoj" onclick="getPrice()">
+        <h3 id="price">{{ object.price }}</h3>
+        <h2 id="cena">Cena : <h2 id="out">{{ object.price }}</h2> </h2>
+        <button type="submit">Rezerwuj</button>
+    </form>
+    </div>
+</div>
+<script type="text/javascript" src="{% static 'home/js/reservation.js'%}"/>
+{% endblock body %}

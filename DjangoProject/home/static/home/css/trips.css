@@ -1,18 +1,4 @@
-/* *{
-    margin:0;
-    padding: 0;
-    box-sizing: border-box;
-} */
-/* body{
-    background: #010615;
-    margin:0;
-    padding: 0;
-} */
 .contOferty{
-    /*background: url(/static/home/img/samolot.jpg) center;
-    background-attachment: fixed;
-    background-origin: content-box;
-    background-size: cover;*/
     padding-bottom: 200px;
     width: 100%;
 }
@@ -70,44 +56,6 @@
 .boxWycieczki:hover .imgBx img{
     opacity: 0.4;
 }
-/*obramowanie +blur  glupie indexy nie działają!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
-/* .boxWycieczki:before{
-    content:'' ;
-    position: absolute;
-    top: -2px;
-    left: -2px;
-    right: -2px;
-    bottom: -2px;
-    background: #FFF;
-    z-index: -1;
-    border-radius: 15px;
-}
-.boxWycieczki:after{
-    content:'' ;
-    position: absolute;
-    top: -2px;
-    left: -2px;
-    right: -2px;
-    bottom: -2px;
-    background: #FFF;
-    z-index: -2;
-    filter: blur(50px);
-    border-radius: 15px;
-}
-.boxWycieczki:before,
-.boxWycieczki:after{
-   background: linear-gradient(235deg,#89ff00,#010615,#00bcd4);
-
-}
-.boxWycieczki:nth-child(2):before,
-.boxWycieczki:after{
-    background: linear-gradient(235deg,#ff005e,#010615,#fbff00);
-}
-.boxWycieczki:nth-child(3):before,
-.boxWycieczki:after{
-    background: linear-gradient(235deg,#772aff,#010615,#21963f);
-} */
-/*content*/
 .boxWycieczki .content{
     position: absolute;
     left: 10px;
@@ -186,7 +134,7 @@
     border-radius: 60px;
     position: relative;
     top: 100px;
-    padding 20px;
+    padding: 20px;
     float:left;
 }
 
@@ -194,7 +142,6 @@
     max-width: 24%;
     opacity: 1;
     transition: 0.5s;
-    margin 2%;
 }
 
 #zamow{
@@ -213,4 +160,11 @@
     padding-top: 20px;
     padding-left: 20px;
     padding-right: 20px;
+}
+#zamow form input,select{
+display:block;
+}
+
+#price{
+    display: none;
 }

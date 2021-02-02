@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from .models import Trip
-from django.views.generic import ListView
+from django.views.generic import ListView, DetailView
 
 
 def home(request):
@@ -19,3 +19,8 @@ def wycieczki(request):
         'trips': Trip.objects.all()
     }
     return render(request, 'home/trips.html', context)
+
+
+class TripsDetailView(DetailView):
+    model = Trip
+    template_name = 'home/trips-detail.html'

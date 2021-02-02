@@ -1,6 +1,7 @@
 from django.db import models
 from django.utils import timezone
 from django.contrib.auth.models import User
+from datetime import date
 
 
 class Trip(models.Model):
@@ -8,6 +9,9 @@ class Trip(models.Model):
     Hotel = models.TextField(blank=True)
     description = models.TextField(blank=True)
     duration = models.TextField(blank=True)
+    deadline1 = models.DateField(auto_now_add=False, blank=True)
+    deadline2 = models.DateField(auto_now_add=False, blank=True)
+    deadline3 = models.DateField(auto_now_add=False, blank=True)
     rating = models.DecimalField(max_digits=5, decimal_places=0, default=5)
     price = models.DecimalField(max_digits=15000, decimal_places=2, default=0)
     main_image = models.ImageField(upload_to='trips_pics', blank=True)

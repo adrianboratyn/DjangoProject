@@ -6,11 +6,6 @@ from django.views.generic import ListView, DetailView
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 
-
-def home(request):
-    return render(request, 'home/home.html')
-
-
 class TripsListView(ListView):
     model = Trip
     template_name = 'home/trips.html'

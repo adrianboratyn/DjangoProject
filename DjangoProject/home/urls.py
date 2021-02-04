@@ -10,3 +10,10 @@ urlpatterns = [
     path('oferty/<int:pk>/succes', views.reservation, name='reservation'),
 
 ]
+
+
+from .views import HomeView
+
+urlpatterns = [
+    path("", HomeView.as_view(), name="home"),
+]

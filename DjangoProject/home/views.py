@@ -1,3 +1,4 @@
+
 from django.shortcuts import render, redirect
 from .models import Trip
 from .forms import ReservationForm
@@ -46,3 +47,8 @@ def reservation(request, *args, **kwargs):
         'kwargs': kwargs,
     }
     return render(request, 'home/partials/reservation.html', context)
+
+from django.views.generic import TemplateView
+
+class HomeView(TemplateView):
+    template_name = "home/home.html"

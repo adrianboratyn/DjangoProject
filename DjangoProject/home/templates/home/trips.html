@@ -1,0 +1,38 @@
+{% extends "home/base.html" %}
+{% load static %}
+
+{% block head %}
+    <link rel="stylesheet" href="{% static 'home/css/trips.css'%}">
+    <title>Strona z Wycieczkami</title>
+{% endblock head %}
+
+{% block body %}
+   
+<div class="contOferty">
+    <div id="oferty">
+        {% for trip in trips %}
+        <div class="boxWycieczki">
+            <div class="imgBx">
+                <img src="{{ trip.main_image.url }}">
+            </div>
+
+            <a href="{% url 'trips-detail' trip.id %}" class="szczegoly">Sprawdź szczegóły oferty</a>
+
+            <div class="content">
+                <h2>{{ trip.title }}<br>
+                    <span>
+                        Hotel: {{ trip.Hotel }}
+                        <br>
+                        Ocena: {{ trip.rating }}/5
+                        <br>
+                        Czas trwania: {{ trip.duration }} dni
+                        <br>
+                        Cena: {{ trip.price }} zł
+                </span>
+                </h2>
+            </div>
+        </div>
+    {% endfor %}
+    </div>
+</div>
+{% endblock body %}

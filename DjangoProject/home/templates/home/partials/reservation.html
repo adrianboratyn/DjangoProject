@@ -1,0 +1,40 @@
+<h2>Formularz Rezerwacji</h2>
+    <form method="POST" action="succes">
+
+        <div id="hidden">
+            <p id="k1">{{ kwargs.arg1 }}</p>
+            <p id="k2">{{ kwargs.arg2 }}</p>
+            <p id="k3">{{ kwargs.arg1.price }}</p>
+
+            {{ form.user }}
+            {{ form.trip }}
+            {{ form.day }}
+            {{ form.price }}
+        </div>
+
+        {% csrf_token %}
+        <label for="termin">Termin:</label>
+        <select id="termin">
+            <option>{{ kwargs.arg1.deadline1 }}</option>
+            <option>{{ kwargs.arg1.deadline2 }}</option>
+            <option>{{ kwargs.arg1.deadline3 }}</option>
+        </select>
+
+        <label for="{{ form.adults.id_for_label }}">Dorosłych:</label>
+        {{ form.adults}}
+
+        <label for="{{ form.kids.id_for_label }}">Dzieci:</label>
+        {{ form.kids }}
+
+        <label for="{{ form.phone.id_for_label }}">Numer kontaktowy:</label>
+        {{ form.phone }}
+
+        <label for="{{ form.guide.id_for_label }}">Prywatny przewodnik (+300PLN)</label>
+        {{ form.guide }}
+
+        <label for="{{ form.room.id_for_label }}">Pokój premium (+400PLN)</label>
+        {{ form.room }}
+
+        <h2 id="cena">Cena : <h2 id="out">{{ kwargs.arg1.price }}</h2> </h2>
+        <button type="submit">Rezerwuj</button>
+    </form>

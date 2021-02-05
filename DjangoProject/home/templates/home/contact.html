@@ -1,0 +1,32 @@
+{% extends "home/base.html" %}
+{% load crispy_forms_tags %}
+{% load static %}
+
+{% block head %}
+    <link rel="stylesheet" href="{% static 'home/css/contact.css'%}">
+    
+    <title>Kontakt</title>
+{% endblock head %}
+
+{% block body %}
+<div class="cont">
+    <div id="frame">
+        <H1> ZADAJ PYTANIE</H1>
+
+        <div class="FormContact">
+            <div>
+                <form method="POST">
+                    {% csrf_token %}
+                    
+                    {{ form|crispy }}
+
+                    <div class="submit">
+                        <button type="submit">Wyslij</button>
+                    </div>
+                </form>
+            </div>
+        
+        </div>
+    </div>
+</div>
+{% endblock body %}

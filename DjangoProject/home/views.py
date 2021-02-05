@@ -1,10 +1,11 @@
 
 from django.shortcuts import render, redirect
-from .models import Trip
-from .forms import ReservationForm
+from .models import Trip,Contact
+from .forms import ReservationForm,ContactForm
 from django.views.generic import ListView, DetailView
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
+from django.views.generic import TemplateView
 
 class TripsListView(ListView):
     model = Trip
@@ -43,10 +44,27 @@ def reservation(request, *args, **kwargs):
     }
     return render(request, 'home/partials/reservation.html', context)
 
-from django.views.generic import TemplateView
+def Contact(request):
+    if request.method == 'POST':
+        c_form = ContactForm(request.POST)
+        if c_form.is_valid():
+            c_form.save()
+            messages.success(request, f'Zapytanie zostało wysłane pomyslnie')
+            return redirect('home')
+
+    else:
+        c_form = ContactForm()
+
+    return render(request, 'home/contact.html', {'form': c_form})
+
+
+
 
 class HomeView(TemplateView):
     template_name = "home/home.html"
 
 class ExchangeRatesView(TemplateView):
     template_name = "home/exchangerates.html"
+    
+class ContactView(TemplateView):
+    template_name = "home/contact.html"    

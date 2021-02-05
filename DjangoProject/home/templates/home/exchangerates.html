@@ -1,0 +1,16 @@
+{% extends "home/base.html" %}
+{% load static %}
+
+{% block head %}
+    <link rel="stylesheet" href="{% static 'home/css/exchangerates.css'%}">
+    <title>Strona z Wycieczkami</title>
+{% endblock head %}
+
+{% block body %}
+<iframe 
+    src="//kursarz.pl?tmpl=widgets&style=1&type=1&modulestyle=raw&vals=ALL" 
+    seamless scrolling="yes" 
+    frameborder="0" 
+    style="border: none; overflow: auto; height: 300px;" allowtransparency="true" />
+</iframe>
+{% endblock body %}

@@ -47,3 +47,6 @@ from django.views.generic import TemplateView
 
 class HomeView(TemplateView):
     template_name = "home/home.html"
+
+class ExchangeRatesView(TemplateView):
+    template_name = "home/exchangerates.html"

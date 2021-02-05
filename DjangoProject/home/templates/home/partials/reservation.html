@@ -1,4 +1,4 @@
-<h2>Formularz Rezerwacji</h2>
+<h2>Formularz Rezerwacji</h2></br>
     <form method="POST" action="succes">
 
         <div id="hidden">
@@ -35,6 +35,6 @@
         <label for="{{ form.room.id_for_label }}">Pokój premium (+400PLN)</label>
         {{ form.room }}
 
-        <h2 id="cena">Cena : <h2 id="out">{{ kwargs.arg1.price }}</h2> </h2>
+        <h2 id="cena">Cena : <span id="out">{{ kwargs.arg1.price }}</span> zł</h2>
         <button type="submit">Rezerwuj</button>
     </form>

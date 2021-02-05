@@ -3,7 +3,7 @@
 {% load static %}
 
 {% block head %}
-    <link rel="stylesheet" href="{% static 'home/css/trips.css'%}">
+    <link rel="stylesheet" href="{% static 'home/css/tripsDetail.css'%}">
     <title>Strona z Wycieczkami</title>
 {% endblock head %}
 
@@ -18,40 +18,42 @@
                 <img src="{{ object.image_three.url }}">
                 <img src="{{ object.image_four.url }}">
             </div>
-          <div class="media-body">
 
+          <div class="media-body">
+            <h2 class="opis"> Hotel: {{ object.Hotel }}</h2>
+            <h2 class="opis">  Ocena: {{ object.rating }}/5</h2>
+            <h2 class="opis"> Czas trwania: {{ object.duration }} dni</h2> 
+                </br>      
             <p class="article-content">{{ object.description }}</p>
-              <h2>
-                    <span>
-                        Hotel: {{ object.Hotel }}
-                        <br>
-                        Ocena: {{ object.rating }}/5
-                        <br>
-                        Czas trwania: {{ object.duration }} dni
-                        <br>
-                        Cena od {{ object.price }} zł/os
-                </span>
-                </h2>
+                </br>
+            <H1 class="opis"> Cena od {{ object.price }} zł/os </H1>
           </div>
     </div>
+    <div class="pogodaContainer"> 
+        <h1 id="miasto">{{ object.location }}</h1>
+            <div class="banerpogoda">       
+                <a id="pogoda" class="weatherwidget-io" href="https://forecast7.com/en/" 
+                    data-label_1={{ object.location }} 
+                    data-label_2="POGODA" 
+                    data-font="Jura" 
+                    data-icons="Climacons Animated" 
+                    data-theme="mountains" >CANARIAS WEATHER
+                </a>
+            </div>
+
+        <h2>Aktualna liczba zakażeń z dnia: <span id='date'></span> </h2>
+        <H1 id='active'></H1>
+        <p id="country" style="display: none;">{{object.country}}</p>
+    </div>
+    {% if user.is_authenticated %}
     <div id="zamow">
         {% render_partial 'home.views.reservation' arg1=object arg2=user %}
     </div>
+    {% endif %}
+  
 </div>
-<h1 id="miasto">{{ object.location }}</h1>
-<div  style="max-width: 306px;">
-    
-    <a id="pogoda" class="weatherwidget-io" href="https://forecast7.com/en/" 
-        data-label_1={{ object.location }} 
-        data-label_2="POGODA" 
-        data-font="Jura" 
-        data-icons="Climacons Animated" 
-        data-theme="mountains" >CANARIAS WEATHER
-    </a>
-</div>
-<h2>Aktualna liczba zakażeń</h2>
-<h3 id='active'></h3><h3 id='date'></h3>
-<p id="country" style="display: none;">{{object.country}}</p>
+
+
 <!--scripts-->
 <script>
     !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src='https://weatherwidget.io/js/widget.min.js';fjs.parentNode.insertBefore(js,fjs);}}(document,'script','weatherwidget-io-js');

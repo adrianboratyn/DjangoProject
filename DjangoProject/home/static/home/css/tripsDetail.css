@@ -1,0 +1,112 @@
+.contOferty{
+    padding-bottom: 200px;
+    width: 100%;
+}
+#oferta{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding-bottom: 115px;
+    padding-top: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-left: 2%;
+    margin-right: 5%;
+    width: 60%;
+    background-color: rgba(255, 255, 255,0.7);
+    border-radius: 60px;
+    position: relative;
+    top: 100px;
+    padding: 20px;
+    float:left;
+}
+#oferta .imgdet{
+    display: flex;
+    justify-content: center;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+    margin-bottom: 30px;
+}
+#oferta .imgdet img{
+    
+    max-width: 400px;
+    opacity: 1;
+    transition: 0.5s;
+    margin-top: 30px;
+    border-radius: 25px;
+}
+
+#zamow{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 30%;
+    margin-right:3%;
+    background-color: rgba(255, 255, 255,0.5);
+    border-radius: 60px;
+    position: relative;
+    float: left;
+    top: 100px;
+    padding-bottom: 115px;
+    padding-top: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+#zamow form input,select{
+display:block;
+}
+
+#hidden,#miasto{
+    display: none;
+}
+.pogodaContainer{
+    height: auto;
+    overflow: hidden;
+    width: 30%;
+    background-color: rgba(255, 255, 255,0.5);
+    border-radius: 60px;
+    position: relative;
+    top: 100px;
+    padding: 20px;
+    height: auto;
+    margin-bottom: 50px;
+}
+.pogodaContainer #pogoda{
+    margin: 20px;
+}
+#active{
+    font-weight: bold;
+    text-align: center;
+}
+#zamow form{
+    display: grid;
+}
+#zamow form label, input,select,button,h2{
+    font-size: 1.2em;
+}
+#zamow form label{
+    font-weight: bold;
+}
+
+#zamow form {
+    margin-top: 25px;
+}
+.pogodaContainer h2{
+    text-align: center;
+}
+.opis{
+    text-align: center;
+    font-size: 1.2em;
+}
+.article-content{
+    font-weight: 600;
+}
+.banerpogoda{
+    width: 300px;
+    margin: auto;
+}
+#pogoda{
+    border-radius: 25px;
+}

@@ -5,6 +5,7 @@ from django.contrib.auth.models import User
 
 class Trip(models.Model):
     title = models.CharField(max_length=100)
+    location=models.TextField(blank=True)
     Hotel = models.TextField(blank=True)
     description = models.TextField(blank=True)
     duration = models.TextField(blank=True)

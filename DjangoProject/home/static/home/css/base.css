@@ -11,6 +11,10 @@ body {
     font-family: 'Montserrat', sans-serif;
     display:flex;
     flex-flow:column wrap;
+    background: url(/static/home/img/samolot.jpg) center;
+    background-attachment: fixed;
+    background-origin: content-box;
+    background-size: cover;
 }
 
 

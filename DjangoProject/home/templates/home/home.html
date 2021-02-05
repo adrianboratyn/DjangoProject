@@ -9,13 +9,20 @@
 {% block body %}
   <div class="hero">
     <h1>IT flies - serfuj nie tylko po internecie</h1>
-    <div class="clouds">
-      <img src="{% static 'home/img/cloud1.png'%}" style="--i:1;">
-      <img src="{% static 'home/img/cloud2.png'%}" style="--i:2;">
-      <img src="{% static 'home/img/cloud3.png'%}" style="--i:3;">
-      <img src="{% static 'home/img/cloud4.png'%}" style="--i:4;">
-      <img src="{% static 'home/img/cloud5.png'%}" style="--i:5;">
-    </div>
+    <div class="cloudsup" >
+          <img src="{% static 'home/img/cloud1.png'%}" style="--i:1;">
+          <img src="{% static 'home/img/cloud2.png'%}" style="--i:2;">
+          <img src="{% static 'home/img/cloud3.png'%}" style="--i:3;">
+          <img src="{% static 'home/img/cloud4.png'%}" style="--i:4;">
+          <img src="{% static 'home/img/cloud5.png'%}" style="--i:5;">
+      </div>
+      <div class="cloudsdown" >
+          <img src="{% static 'home/img/cloud1.png'%}" style="--i:1;">
+          <img src="{% static 'home/img/cloud2.png'%}" style="--i:2;">
+          <img src="{% static 'home/img/cloud3.png'%}" style="--i:3;">
+          <img src="{% static 'home/img/cloud4.png'%}" style="--i:4;">
+          <img src="{% static 'home/img/cloud5.png'%}" style="--i:5;">
+      </div>
     <div class="container">
       {% include "home/partials/card.html" with image="home/img/chat.png" text="Najczęściej zadawane pytania (FAQ)" %}      
       {% include "home/partials/card.html" with image="home/img/cash.png" text="Aktualne kursy walut" href="waluty" %}      

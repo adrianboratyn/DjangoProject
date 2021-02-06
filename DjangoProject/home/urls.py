@@ -1,6 +1,6 @@
 from django.contrib import admin
 from django.urls import path
-from .views import TripsListView, TripsDetailView,Contact
+from .views import TripsListView, TripsDetailView,Contact,AboutView
 from . import views
 from .views import HomeView, ExchangeRatesView,ContactView
 
@@ -11,4 +11,5 @@ urlpatterns = [
     path('oferty/<int:pk>/succes', views.reservation, name='reservation'),
     path('waluty/', ExchangeRatesView.as_view(), name="exchangerates"),
     path('kontakt/', views.Contact, name="contact"),
+    path('onas/', AboutView.as_view(), name="about"),
 ]

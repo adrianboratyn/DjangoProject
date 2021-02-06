@@ -67,4 +67,7 @@ class ExchangeRatesView(TemplateView):
     template_name = "home/exchangerates.html"
     
 class ContactView(TemplateView):
-    template_name = "home/contact.html"    
+    template_name = "home/contact.html"  
+
+class AboutView(TemplateView):
+    template_name = "home/about.html"  

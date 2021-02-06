@@ -4,13 +4,14 @@
 {% block head %}
     <link rel="stylesheet" href="{% static 'home/css/exchangerates.css'%}">
     
-    <title>Strona z Wycieczkami</title>
+    <title>Aktualne kursy walut</title>
 {% endblock head %}
 
 {% block body %}
 <div id="contOferty"> 
     <div id="oferty">
-        <H1>Aktualne kursy walut</H1>
+        <H1>Aktualne kursy walut [zł]</H1>
+        </br>
         <iframe class="rates"
         src="//kursarz.pl?tmpl=widgets&style=1&type=1&modulestyle=raw&vals=ALL" 
         seamless scrolling="yes" 

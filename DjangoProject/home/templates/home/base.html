@@ -4,6 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" 
+      type="image/png" 
+      href="{% static 'home/img/logo.png'%}">
     <link rel="stylesheet" href="{% static 'home/css/base.css'%}">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     {% block head %}{% endblock %}
@@ -11,7 +14,7 @@
 <body>
     <header class="main-header">
         <div class="logo">
-            <a href="{% url 'home' %}">LOGO</a>
+            <a href="{% url 'home' %}"><img src="{% static 'home/img/logo.png'%}"></a>
         </div>
 
         <input type="checkbox" class="menu-btn" id="menu-btn">
@@ -57,11 +60,19 @@
     <div class="footerDiv">
         <footer class="footer">
             <div class="footer-left">
-                <img src="#" alt="Logo biura">
+                
                 <p>
-                    Info o firmie
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Id dolor magni, nemo neque expedita obcaecati corporis tenetur qui, totam vitae sunt earum aspernatur minima ut nihil ipsum quibusdam commodi distinctio.
+                    IT Flies powstało w 2000 r. w Rzeszowie i od 2012 roku
+                    jest biurem podróży nr 1 w Polsce. W tym czasie wysłaliśmy
+                    na wakacje niemal 8 milionów Klientów. Od początku towarzyszyła
+                    nam pasja do podróżowania i pokazywania świata innym. 
+                    Jako pierwsi odkrywaliśmy kraje, których nigdy wcześniej nie 
+                    proponowali polscy touroperatorzy. Otworzyliśmy ponad 170 
+                    salonów firmowych. W kilku krajach założyliśmy własne biura 
+                    incomingowe, po to by dbać o wysoką jakość obsługi na każdym 
+                    etapie Twojej podróży.
                 </p>
+                <br>
                 <div class="socials">
                     <a href="#"><i class="fa fa-facebook"></i></a>
                     <a href="#"><i class="fa fa-twitter"></i></a>
@@ -72,39 +83,50 @@
             </div>
             <ul class="footer-right">
                 <li>
-                    <h2>Product</h2>
+                    <h2>Wycieczki</h2>
                     <ul class="box">
-                        <li><a href="#">Theme Design</a></li>
-                        <li><a href="#">Theme Design</a></li>
-                        <li><a href="#">Theme Design</a></li>
-                        <li><a href="#">Theme Design</a></li>
-                        <li><a href="#">Theme Design</a></li>
-                        <li><a href="#">Theme Design</a></li>
+                        <li><a href="#">Dla rodzin z dziećmi</a></li>
+                        <li><a href="#">Dla par i singli</a></li>
+                        <li><a href="#">Dla niepełnosprawnych</a></li>
+                        <li><a href="#">Dla fanów białego szaleństwa</a></li>
+                        <li><a href="#">Dla miłośników luksusu</a></li>
+                        <li><a href="#">Dla aktywnych</a></li>
                     </ul>
                 </li>
                 <li class="features">
-                    <h2>Useful Links</h2>
+                    <h2>Jak rezerwować?</h2>
                     <ul class="box">
-                        <li><a href="#">Blog</a></li>
-                        <li><a href="#">Pricing</a></li>
-                        <li><a href="#">Theme Design</a></li>
-                        <li><a href="#">Theme Design</a></li>
-                        <li><a href="#">Theme Design</a></li>
-                        <li><a href="#">Theme Design</a></li>
+                        <li><a href="#">Warunki umowy</a></li>
+                        <li><a href="#">Dane osobowe</a></li>
+                        <li><a href="#">Regulamin serwisu</a></li>
+                        <li><a href="#">Rezerwacja krok po kroku</a></li>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Linie lotnicze</a></li>
                     </ul>
                 </li>
                 <li>
-                    <h2>Address</h2>
+                    <h2>Adres</h2>
                     <ul class="box">
-                        <li><a href="#">Theme Design</a></li>
-                        <li><a href="#">Theme Design</a></li>
-                        <li><a href="#">Warszawa</a></li>
-                        <li><a href="#">Polska</a></li>
+                        <li>Ulica Tadeusza Rejtana 9</li>
+                        <li>35-900 Rzeszów</li>
+                        <li>Polska</li>
                     </ul>
+                    <br>
+                    <div class="socials">
+                        <span>
+                            <i class="fa fa-phone"></i>
+                            &nbsp; 123-456-789
+                        </span>
+                        <br>
+                        <span>
+                            <i class="fa fa-envelope"></i>
+                            &nbsp; info@itflies.com
+                        </span>
+                    </div>
                 </li>
             </ul>
             <div class="footer-bottom">
-                <p>All Right reserved by &copy;nazwaFirmy 2020</p>
+                <p>All Right reserved by &copy;IT Flies 2021</p>
             </div>
         </footer>
     </div>

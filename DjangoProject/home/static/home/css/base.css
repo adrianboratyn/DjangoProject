@@ -117,6 +117,9 @@ body {
 .main-header.scrolled .menu-icon .menu-icon__line::after {
     background: white;
 }
+.logo img{
+    max-width: 65px;
+}
 
 .footerDiv {
     display: grid;
@@ -141,9 +144,7 @@ footer {
     margin-bottom: 2em;
 }
 
-.footer-left img {
-    width: 50%;
-}
+
 
 h2 {
     font-weight: 600;

@@ -1,5 +1,5 @@
 from django import forms
-from .models import Reservation,Contact
+from .models import Reservation, Contact
 
 
 class ReservationForm(forms.ModelForm):
@@ -14,6 +14,7 @@ class ReservationForm(forms.ModelForm):
         model = Reservation
         fields = ['user', 'trip', 'day', 'adults', 'kids', 'phone', 'guide', 'room', 'price']
 
+
 class ContactForm(forms.ModelForm):
     """Klasa prezentująca formularz kontaktu
 
@@ -25,5 +26,3 @@ class ContactForm(forms.ModelForm):
         """
         model = Contact
         fields = ['NameAndLastName', 'Email', 'Telephone', 'Thema', 'Content']
-
-  

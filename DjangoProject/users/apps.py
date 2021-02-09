@@ -1,8 +1,8 @@
 from django.apps import AppConfig
 
 
-#clasa potrzebana do zarejestrowania aplikacji w settings.py
 class UsersConfig(AppConfig):
+    # klasa potrzebana do zarejestrowania aplikacji w settings.py
     name = 'users'
 
     def ready(self):

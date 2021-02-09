@@ -1,11 +1,11 @@
-
 from django.shortcuts import render, redirect
-from .models import Trip,Contact
-from .forms import ReservationForm,ContactForm
+from .models import Trip
+from .forms import ReservationForm, ContactForm
 from django.views.generic import ListView, DetailView
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 from django.views.generic import TemplateView
+
 
 class TripsListView(ListView):
     """[summary]
@@ -54,7 +54,7 @@ def reservation(request, *args, **kwargs):
     return render(request, 'home/partials/reservation.html', context)
 
 
-def Contact(request):
+def contact(request):
     """Metoda sprawdza czy formularz został wysłany,
      jesli tak to sprawdza jego poprawność,
      zapisuje zmiany oraz przenosi na stronę startową.

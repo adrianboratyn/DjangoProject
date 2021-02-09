@@ -24,10 +24,10 @@
           <img src="{% static 'home/img/cloud5.png'%}" style="--i:5;">
       </div>
     <div class="container">
-      {% include "home/partials/card.html" with image="home/img/chat.png" text="Najczęściej zadawane pytania (FAQ)" %}      
+      {% include "home/partials/card.html" with image="home/img/chat.png" text="Najczęściej zadawane pytania (FAQ)" href="#" %}
       {% include "home/partials/card.html" with image="home/img/cash.png" text="Aktualne kursy walut" href="waluty" %}      
-      {% include "home/partials/card.html" with image="home/img/plane.png" text="Bezpieczeństwo na lotnisku i w samolocie" %}      
-      {% include "home/partials/card.html" with image="home/img/bus.png" text="Na wycieczce objazdowej" %}      
+      {% include "home/partials/card.html" with image="home/img/plane.png" text="Bezpieczeństwo na lotnisku i w samolocie" href="#" %}
+      {% include "home/partials/card.html" with image="home/img/bus.png" text="Na wycieczce objazdowej" href="#" %}
     </div>
   </div>
 {% endblock %}

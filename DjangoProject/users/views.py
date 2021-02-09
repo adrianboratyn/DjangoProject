@@ -4,7 +4,6 @@ from .forms import UserRegisterForm, UserUpdateForm, ProfileUpdateForm
 from django.contrib.auth.decorators import login_required
 
 
-# Create your views here.
 def register(request):
     """Metoda sprawdza czy formularz został wysłany,
      jesli tak to sprawdza jego poprawność,
@@ -28,9 +27,10 @@ def register(request):
         form = UserRegisterForm()
     return render(request, 'users/register.html', {'form': form})
 
+
 @login_required
 def profile(request):
-      """Metoda sprawdza czy formularz został wysłany,
+    """Metoda sprawdza czy formularz został wysłany,
      jesli tak to sprawdza jego poprawność,
      zapisuje zmiany oraz przenosi na stronę z profilem użytkownika.
 

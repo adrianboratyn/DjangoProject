@@ -1,5 +1,6 @@
 from django.apps import AppConfig
 
-#clasa potrzebana do zarejestrowania aplikacji w settings.py
+
 class HomeConfig(AppConfig):
+    # klasa potrzebana do zarejestrowania aplikacji w settings.py
     name = 'home'

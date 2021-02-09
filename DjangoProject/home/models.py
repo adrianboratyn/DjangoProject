@@ -45,6 +45,7 @@ class Reservation(models.Model):
     guide = models.BooleanField(default=0)
     room = models.BooleanField(default=0)
 
+
 class Contact(models.Model):
     """Model kontaktu
 
@@ -53,6 +54,6 @@ class Contact(models.Model):
     """
     NameAndLastName = models.TextField(max_length=50)
     Email = models.EmailField(max_length=50)
-    Telephone=models.TextField(max_length=15)
-    Thema=models.TextField(max_length=50)
-    Content=models.TextField(max_length=500)
+    Telephone = models.TextField(max_length=15)
+    Thema = models.TextField(max_length=50)
+    Content = models.TextField(max_length=500)

@@ -6,6 +6,17 @@ from django.contrib.auth.decorators import login_required
 
 # Create your views here.
 def register(request):
+    """Metoda sprawdza czy formularz został wysłany,
+     jesli tak to sprawdza jego poprawność,
+     zapisuje zmiany oraz przenosi na stronę z logowaniem.
+
+    Args:
+        request 
+
+    Returns:
+        Strona z logowaniem w przypadku sukcesu lub
+        strona z rejestracją w przypadku niepowodzenia.
+    """
     if request.method == 'POST':
         form = UserRegisterForm(request.POST)
         if form.is_valid():
@@ -19,6 +30,17 @@ def register(request):
 
 @login_required
 def profile(request):
+      """Metoda sprawdza czy formularz został wysłany,
+     jesli tak to sprawdza jego poprawność,
+     zapisuje zmiany oraz przenosi na stronę z profilem użytkownika.
+
+    Args:
+        request 
+
+    Returns:
+        Strona z profilem użytkownika.
+       
+    """
     if request.method == 'POST':
         u_form = UserUpdateForm(request.POST, instance=request.user)
         p_form = ProfileUpdateForm(request.POST,

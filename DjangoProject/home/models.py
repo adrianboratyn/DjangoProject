@@ -4,6 +4,11 @@ from django.contrib.auth.models import User
 
 
 class Trip(models.Model):
+    """Model wycieczki
+
+    Args:
+        models (Model): 
+    """
     title = models.CharField(max_length=100)
     location=models.TextField(blank=True)
     country=models.TextField(blank=True)
@@ -25,6 +30,11 @@ class Trip(models.Model):
 
 
 class Reservation(models.Model):
+    """Model rezerwacji
+
+    Args:
+        models (Model): 
+    """
     user = models.TextField(blank=True)
     trip = models.TextField(blank=True)
     day = models.TextField(blank=True)
@@ -36,6 +46,11 @@ class Reservation(models.Model):
     room = models.BooleanField(default=0)
 
 class Contact(models.Model):
+    """Model kontaktu
+
+    Args:
+        models (Model): 
+    """
     NameAndLastName = models.TextField(max_length=50)
     Email = models.EmailField(max_length=50)
     Telephone=models.TextField(max_length=15)

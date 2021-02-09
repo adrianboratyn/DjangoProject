@@ -4,13 +4,27 @@ from PIL import Image
 
 
 class Profile(models.Model):
+    """Klasa reprezentująca model profilu użytkownika.
+
+    Args:
+        models (Model)
+
+    """
     user = models.OneToOneField(User, on_delete=models.CASCADE)
     image = models.ImageField(default='default.png', upload_to='profile_pics')
 
     def __str__(self):
+        """Reprezentacja obiektu w formie string.
+
+        Returns:
+            string: nazwa użytkownika 
+        """
         return f'{self.user.username} Profile'
 
     def save(self, *args, **kwargs):
+        """Zapisanie profilu użytkownika,
+        dostosowanie rozmiaru zdjęcia.
+        """
         super().save(*args, **kwargs)
 
         img = Image.open(self.image.path)

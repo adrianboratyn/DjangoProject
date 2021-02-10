@@ -10,8 +10,8 @@ class Trip(models.Model):
         models (Model): 
     """
     title = models.CharField(max_length=100)
-    location=models.TextField(blank=True)
-    country=models.TextField(blank=True)
+    location = models.TextField(blank=True)
+    country = models.TextField(blank=True)
     Hotel = models.TextField(blank=True)
     description = models.TextField(blank=True)
     duration = models.TextField(blank=True)
@@ -35,8 +35,8 @@ class Reservation(models.Model):
     Args:
         models (Model): 
     """
-    user = models.TextField(blank=True)
-    trip = models.TextField(blank=True)
+    user = models.ForeignKey(User, on_delete=models.SET_NULL, default=1, null=True)
+    trip = models.ForeignKey(Trip, on_delete=models.SET_NULL, default=1, null=True)
     day = models.TextField(blank=True)
     adults = models.DecimalField(max_digits=2, decimal_places=0, default=1)
     kids = models.DecimalField(max_digits=2, decimal_places=0, default=0)

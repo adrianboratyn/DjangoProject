@@ -1,4 +1,4 @@
-![Strona startowa](https://github.com/adrianboratyn/DjangoProject/blob/main/DjangoProject/home/static/home/img/readmePicture.png)
+![Strona startowa](https://github.com/adrianboratyn/DjangoProject/blob/main/DjangoProject/home/static/home/img/readmePicture.PNG)
 
 
 
